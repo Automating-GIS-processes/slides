@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>AutoGIS 2021</title>
+
+		<link rel="stylesheet" href="reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="reveal.js/dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h2>Final Assignment</h2>
+					</section>
+					<section>
+						<h3><b>Main goal:</b></h3> 
+						Practice and demonstrate skills <br>learned in Geo-Python and AutoGIS
+					</section>
+					
+					<section>
+						<h3>Course topics</h3>
+						<table>
+							<tbody style="font-size:0.7em;">
+								<tr>
+									<td><b>1</b></td>
+									<td>Shapely and geometric objects <br>(points, lines and polygons)</td>
+								</tr>
+								<tr>
+									<td><b>2</b></td>
+									<td>Managing spatial data with Geopandas <br>(reading and writing data, projections, table joins)</td>
+								</tr>
+								<tr>
+									<td><b>3</b></td>
+									<td>Geocoding and spatial queries</td>
+								</tr>
+								<tr>
+									<td><b>4</b></td>
+									<td>Reclassifying data, overlay analysis</td>
+								</tr>
+								<tr>
+									<td><b>5</b></td>
+									<td>Visualization: static and interactive maps</td>
+								</tr>
+								<tr>
+									<td><b>6</b></td>
+									<td>Course recap and preparing for the final assignment</td>
+								</tr>
+								<tr>
+									<td><b>7</b></td>
+									<td>OpenStreetMap data (osmnx) and Network analysis (networkx)</td>
+								</tr>
+								<tr>
+									<td><b>Extra</b></td>
+									<td>Raster processing (rasterio), Python in QGIS</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>Learning Goals</h3>
+							<ul style="font-size:0.7em;">
+								<li>Test and produce <b>modular code</b></li>
+								<li>Manage <b>spatial data</b> programmatically</li>
+								<li>Apply <b>spatial analysis methods</b></li>
+								<li>Create <b>visualizations</b> from geographic data</li>
+								<li>Design and implement a geographical <b>data analysis workflow</b></li>
+							</ul>
+					</section>
+					<section>
+						<h3>Generic Skills</h3>
+						<ul style="font-size:0.7em;">
+							<li>Independently <b>search for information</b></li>
+							<li><b>Apply new methods</b> based on online documentation</li>
+							<li><b>Critically evaluate</b> methods and information sources</li>
+							<li>Understand the importance of <b>version control</b></li>
+							<li><b>Communicate</b> analysis workflows in written format</li>
+							<li>Complete assingments <b>on time</b></li>
+						</ul>
+					</section>
+					<section title="objective">
+						<p><b>Objective of assignment:</b><br>Develop a GIS analysis workflow using Python that includes:</p>
+						<ol style="font-size:0.7em;">
+							<li><b>Data acquisition</b> <br> Reading data from files or online sources (20 points)</li>
+							<li><b>Data analysis</b><br> Enriching and analyzing the data, e.g., spatial join, overlay, buffering, etc. (20 points)</li>
+							<li><b>Visualization</b><br> Visualizing the results as maps and graphs (20 points)</li>
+							
+						</ol>
+						<br>
+						<p style="font-size:0.7em; text-align: left;">10 points for overall documentation of the work<br>
+						Extra points available for other merits in the work</p>
+					</section>
+
+					<section title="Structure">
+						<h3>Structure</h3>
+						<ul style="font-size:0.7em;">
+							<li>The final work will be a set of Jupyter Notebook files (.ipynb) and/or Python script files (.py)</li>
+							<li>The README (.md) should contain all relevant information about the work, including links to all files</li>
+							<li>Remember to use informative variable names, inline comments, docstrings etc.</li>
+							<li>IF you are using large input files, DON’T upload them to GitHub! You can provide sample data for demonstrating your workflow, and/or download instructions for the whole data set.</li>
+						</ul>
+					</section>
+					<section>
+						<div style="text-align:left;">
+							<b>Two deadlines</b>:<br>
+							<ul>
+								<li>1st deadline: <b>31st December 2021</b></li>
+								<li>2nd deadline: <b>16th January 2022</b></li>
+							</ul><br>
+							<br>
+							60 % of course grade
+						</div>
+					</section>
+				
+				</section>
+				
+				<section title="Topics">
+					<section>
+						<h2>Topics</h2>
+					</section>
+					<section title="Access viz">
+						<h3><a href="https://autogis-site.readthedocs.io/en/latest/lessons/FA/final-assignment.html#accessviz" target="_blank">Access viz</a></h3>
+						<div style="text-align:left;font-size:0.7em;">
+						<span><b>Objective:</b> Create a Python tool (i.e. a set of Notebooks and/or Python script files) for managing, analyzing and visualizing the Travel Time Matrix data  set. AccessViz consist of Python functions, and examples on how to use these functions.</span><br>
+						<br>
+						<span><b>Contents:</b> four main components for accessing the files, joining the attribute information to spatial data, visualizing the data and comparing different travel modes:</span><br><br>
+						<ol>
+							<li>FileFinder</li>
+							<li>TableJoiner</li>
+							<li>Visualizer</li>
+							<li>Comparison tool</li>
+							
+						</ol>
+						<br><br>
+						+ four other optional components
+						</div>
+					</section>
+					<section title="Urban indicators">
+						<h3><a href="https://autogis-site.readthedocs.io/en/latest/lessons/FA/final-assignment.html#urban-indicators" target="_blank">Urban indicators</a></h3>
+						<div style="text-align:left;font-size:0.7em;">
+						<span><b>Objective:</b> Develop an urban analytics tool and apply it to at least two cities or neighborhoods(e.g., Helsinki and Tampere, or neighborhood areas in Helsinki).</span><br><br>
+
+						<span>The main idea is to calculate a set of metrics /indicators based on the urban form and/or population, and to compare the cities/regions based on these measures.</span>
+						<br><br>
+						<span><b>Contents:</b> You should use 2-4 different indicators, for example some of these: </span><br><br>
+						<ul>
+							<li>Population distribution and demographics</li>
+							<li>Urban population growth</li>
+							<li>Accessibility</li>
+							<li>Green area index</li>
+							<li>Street network metrics</li>
+							<li>Building density</li>
+							
+						</ul>
+						</div>
+					</section>
+					<section title="Your topic">
+						<h3><a href="https://autogis-site.readthedocs.io/en/latest/lessons/FA/final-assignment.html#own-project-work" target="_blank">Your own topic</a></h3>
+						<div style="text-align:left;font-size:0.7em;">
+						<span><b>Objective:</b> Develop your own topic! In general, your own topic should also contain these sections: </span><br><br>
+
+						<ol>
+							<li><b>Data acquisition</b> Fetching data, subsetting data, storing intermediate outputs etc.</li>
+							<li><b>Data analysis</b> Enriching and analyzing data, eg. spatial join, overlay, buffer, etc.</li>
+							<li><b>Visualization</b> Maps and graphs</li>
+						</ol>
+						<br><br>
+						<span>But feel free to be creative! Your own project might be, for example, related to your thesis or work project. Remember to describe clearly what you are doing in the final assignment repository README.md -file. </span>
+						<br><br>
+						<span>Preferably, present your idea to the course instructors before the winter holidays </span>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Tips and tricks</h2>
+					</section>
+					<section title="Best practices">
+						<p style="font-size:0.8em;">Best practices in programming from <a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745" target="_blank">Wilson et al. (2014)</a></p>
+						
+						<ol style="font-size:0.7em;">
+						<li>Write programs for people, not computers.</li>
+						<li>Let the computer do the work.</li>
+						<li>Make incremental changes.</li>
+						<li>Don't repeat yourself (or others).</li>
+						<li>Plan for mistakes.</li>
+						<li>Optimize software only after it works correctly.</li>
+						<li>Document design and purpose, not mechanics.</li>
+						<li>Collaborate</li>
+						</ol>
+						
+					</section>
+
+					<section title="Checklist">
+						<h3>Checklist</h3>
+						<ul style="font-size:0.7em;">
+							<li>Is the <b>overall aim and structure</b> of the submission is clearly documented in the README.md file?</li>
+							<li>Is the <b>documentation</b> of the analysis process and related functions clear (docstrings, comments, markdown texts readme)?</li>
+							<li>Are there <b>visualizations</b>? At least a single map should be in place, after all, this is a GIS course!</li>
+							<li>Does the code work? Does the <b>code work with different inputs</b>?</li>
+							<li>Does the code <b>avoid unnecessary repetition</b> (e.g. by using functions and for-loops)? </li>
+							<li>Is the extent of the work <b>sufficient</b>? (consider that the final work replaces an exam!</li>
+						</ul>
+						
+					</section>
+					<section>
+						<h2>Additional Resources</h2>
+					</section>
+					<section>
+						<h3>Raster Data Processing</h3>
+						<img src="raster.png">
+						<a href="https://autogis-site.readthedocs.io/en/latest/lessons/Raster/overview.html" target="_blank">Raster lesson</a>
+					</section>
+					<section>
+						<h3>Online Resources</h3>
+						<p style="font-size:0.7em; text-align: left;">
+							<b>MovingPandas for analysing trajectories:</b><br>
+							<a href="https://github.com/anitagraser/movingpandas" target="_blank">github.com/anitagraser/movingpandas</a><br>
+							<a href="https://anitagraser.com/2019/09/11/movement-data-in-gis-24-movingpandas-hands-on-tutorials/" target="_blank">anitagraser.com/2019/09/11/movement-data-in-gis-24-movingpandas-hands-on-tutorials</a><br><br>
+							<b>Plotly express for interactive maps: </b><br>
+							<a href="https://plot.ly/python/plotly-express/" target="_blank">plot.ly/python/plotly-express</a><br>
+							<a href="https://plot.ly/python/maps/" target="_blank">plot.ly/python/maps</a><br><br>
+							<b>Raster data visualization using datashader:</b><br>
+							<a href="https://datashader.org/user_guide/Geography.html" target="_blank">datashader.org/user_guide/Geography.html</a>
+						</p>
+					</section>
+				</section>
+				<section>
+					<h2>Get started</h2>
+					<a href="https://autogis-site.readthedocs.io/en/latest/lessons/FA/final-assignment.html" target="_blank">autogis-site.readthedocs.io</a> 
+				</section>
+
+			</div>
+
+			<div class="header">
+				<img src="reveal.js/logo_flame.png" height="150px" style="float: left;">
+			</div>
+			<div class="footer">
+				<img src="reveal.js/logo_text.png" height="75px" style="float: left;">
+			</div>
+		</div>
+
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+		</script>
+	</body>
+</html>
