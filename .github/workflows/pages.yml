@@ -1,4 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
+# vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab:
+
 name: Deploy static content to Pages
 
 on:
@@ -31,14 +32,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
+            fetch-depth: 0
             submodules: true
+
       - name: Setup Pages
         uses: actions/configure-pages@v2
+
+      - name: Check out one tag after another
+        run: |
+            for tag in $(git tag); do
+                git checkout "${tag}"
+                mkdir -pv "/tmp/public_html/${tag}"
+                cp -Rfv ./ "/tmp/public_html/${tag}"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
-          path: '.'
+          path: '/tmp/public_html'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
