@@ -44,6 +44,7 @@ jobs:
                 git checkout "${tag}"
                 mkdir -pv "/tmp/public_html/${tag}"
                 cp -Rfv ./ "/tmp/public_html/${tag}"
+            done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
